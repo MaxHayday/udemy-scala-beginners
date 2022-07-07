@@ -60,16 +60,16 @@ object Recursion extends App {
       if (!isStillPrime) false
       else if (t <= 1) true
       else isPrimeTailrec(t - 1, n % t != 0 && isStillPrime)
-//00111001100101001010111101010001010000110010000011111011000001010011011100111000111101110100000011011000
+
     isPrimeTailrec(n / 2, true)
   }
 
   println(isPrime(2003))
   println(isPrime(629))
 
-    def fibonacci(n: Int): Int = {
+  def fibonacci(n: Int): Int = {
     def fiboTailrec(i: Int, last: Int, nextToLast: Int): Int =
-      if(i >= n) last
+      if (i >= n) last
       else fiboTailrec(i + 1, last + nextToLast, last)
 
     if (n <= 2) 1
